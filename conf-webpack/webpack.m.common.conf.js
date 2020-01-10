@@ -18,7 +18,9 @@ const htmlMod = require('./modules/html')
 // Pages const for HtmlWebpackPlugin
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#html-dir-folder
 const PAGES_DIR = PATHS.src
-const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.html'))
+const PAGES = fs
+  .readdirSync(PAGES_DIR)
+  .filter(fileName => fileName.endsWith('.html'))
 
 // const ANY_PAGES_DIR = PATHS.anyPages
 // const anyPAGES = fs.readdirSync(ANY_PAGES_DIR).filter(fileName => fileName.endsWith('.html'))
@@ -31,8 +33,8 @@ module.exports = merge([
   },
   {
     entry: {
-      // app: PATHS.src,
-      index: './src/index',
+      app: PATHS.src,
+      // index: './src/index',
       // about: './src/about',
       // module: `${PATHS.src}/third.js`,
     }
@@ -86,11 +88,8 @@ module.exports = merge([
       // new VueLoaderPlugin(),
 
       new MiniCssExtractPlugin({
-        // moduleFilename: ({ name }) => `${name.replace('/js/', '/css/')}.css`,
         filename: `${PATHS.assets}css/[name].css`,
         // filename: `${PATHS.assets}css/[name].[hash].css`,
-        // chunkFilename: 'chunk-[id].css',
-        // chunkFilename: `${PATHS.assets}css/[name].[id].css`,
       }),
 
       new CopyWebpackPlugin([
@@ -99,9 +98,12 @@ module.exports = merge([
         { from: `${PATHS.src}/static`, to: '' },
       ]),
 
-      // new HtmlWebpackPlugin({
-      //   template: './src/index.html'
-      // }),
+      new HtmlWebpackPlugin({
+        filename: `${PATHS.src}/index.html`,
+        template: `${PATHS.src}/index.html`,
+        // template: './src/index.html',
+        inject: true
+      }),
   
       // Automatic creation any html pages (Don't forget to RERUN dev server)
       // see more: https://github.com/vedees/webpack-template/blob/master/README.md#create-another-html-files

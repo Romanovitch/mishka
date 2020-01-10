@@ -1,0 +1,11 @@
+import { BtnComponent } from '../assets/components';
+
+function App() {
+  return BtnComponent
+}
+
+App.prototype.run = function() {
+
+}
+
+export { App };

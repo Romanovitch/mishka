@@ -14,16 +14,16 @@ module.exports = function () {
             },
             {
               loader: 'css-loader',
-              options: { sourceMap: true }
+              options: { sourceMap: false }
               // options: { modules: true, sourceMap: true } // такие имена классов - ._1P_FZnkywHleo9-jyrgWQK
             }, 
             {
               loader: 'postcss-loader',
-              options: { sourceMap: true, config: { path: `./postcss.config.js` } }
+              options: { sourceMap: false, config: { path: `./postcss.config.js` } }
             }, 
             {
               loader: 'sass-loader',
-              options: { sourceMap: true }
+              options: { sourceMap: false }
             }
           ]
         }
