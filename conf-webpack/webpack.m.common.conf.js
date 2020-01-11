@@ -6,13 +6,13 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 // const { VueLoaderPlugin } = require('vue-loader')
 const merge = require('webpack-merge')
 
-const PATHS = require('./modules/myPATHS') 
-const jsMod = require('./modules/js') 
-const fontsMod = require('./modules/fonts') 
-const imagesMod = require('./modules/images') 
-const scssMod = require('./modules/scss') 
-const cssMod = require('./modules/css') 
-const htmlMod = require('./modules/html') 
+const PATHS = require('./myPATHS') 
+const jsMod = require('./modules/js/js') 
+const fontsMod = require('./modules/fonts/fonts') 
+const imagesMod = require('./modules/images/images') 
+const scssMod = require('./modules/scss/scss') 
+const cssMod = require('./modules/css/css') 
+const htmlMod = require('./modules/html/html') 
 
 
 // Pages const for HtmlWebpackPlugin
@@ -65,7 +65,7 @@ module.exports = merge([
   jsMod(),
   fontsMod(),
   imagesMod(),
-  scssMod(),
+  // scssMod(),
   cssMod(),
   htmlMod(),
   // {
@@ -119,7 +119,7 @@ module.exports = merge([
       // })),
 
       new CleanWebpackPlugin(),
-      // new CleanWebpackPlugin(['../dist']), //! чегото не работает
+      // new CleanWebpackPlugin(['../dist/*']), //! чегото не работает
       
     ]
   }

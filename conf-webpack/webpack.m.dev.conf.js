@@ -2,6 +2,12 @@ const webpack =  require('webpack')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.m.common.conf')
 
+const PATHS = require('./myPATHS') 
+const scssModule = require('./modules/scss/scss-dev') 
+const cssModule = require('./modules/css/css-dev')
+
+const NODE_ENV = process.env.NODE_ENV || 'development' 
+
 const devConf = {
     // DEV config
     mode: 'development',
@@ -29,10 +35,14 @@ const devPlugins = {
 
 const devWebpackConfig = merge([
   baseWebpackConfig,
+  scssModule(),
+  cssModule(),
   devServer,
   devConf,
   devPlugins
 ])
+
+console.log('NODE_ENV - dev', NODE_ENV)
 
 module.exports = new Promise((resolve, reject) => {
   resolve(devWebpackConfig)
