@@ -9,9 +9,7 @@ module.exports = function () {
           test: /\.scss$/,
           use: [
             'style-loader',
-            {
-              loader: MiniCssExtractPlugin.loader
-            },
+            MiniCssExtractPlugin.loader,
             {
               loader: 'css-loader',
               options: { sourceMap: true }

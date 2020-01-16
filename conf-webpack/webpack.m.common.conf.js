@@ -26,29 +26,29 @@ const PAGES = fs
 // const anyPAGES = fs.readdirSync(ANY_PAGES_DIR).filter(fileName => fileName.endsWith('.html'))
 
 module.exports = merge([
-  {
+  { // externals
     externals: {
       paths: PATHS
     }
   },
-  {
+  { // entry
     entry: {
-      app: PATHS.src,
-      // index: './src/index',
+      // app: PATHS.src,
+      index: './src/index',
       // about: './src/about',
       // module: `${PATHS.src}/third.js`,
     }
   },
-  {
+  { // output
     output: {
       path: PATHS.dist,
-      filename: `${PATHS.assets}js/[name].js`,
-      // filename: `${PATHS.assets}js/[name].[hash].js`, // +hash к имени файла
+      // filename: `${PATHS.assets}js/[name].js`,
+      filename: `${PATHS.assets}js/[name].[hash].js`, // +hash к имени файла
       library: `${PATHS.assets}js/[name]`,
       publicPath: '/'
     }
   },
-  {
+  { // optimization
     optimization: {
       splitChunks: {
         cacheGroups: {
@@ -65,7 +65,7 @@ module.exports = merge([
   jsMod(),
   fontsMod(),
   imagesMod(),
-  // scssMod(),
+  scssMod(),
   cssMod(),
   htmlMod(),
   // {
@@ -75,7 +75,7 @@ module.exports = merge([
   //     }]
   //   }
   // },
-  {
+  { // resolve
     resolve: {
       alias: {
         '~': PATHS.src,
@@ -83,7 +83,7 @@ module.exports = merge([
       }
     }
   },
-  {
+  { // plugins
     plugins: [
       // new VueLoaderPlugin(),
 
@@ -99,9 +99,9 @@ module.exports = merge([
       ]),
 
       new HtmlWebpackPlugin({
-        filename: `${PATHS.src}/index.html`,
-        template: `${PATHS.src}/index.html`,
-        // template: './src/index.html',
+        // filename: `${PATHS.src}/index.html`, // этот путь меняет index.html в src
+        // template: `${PATHS.src}/index.html`,
+        template: './src/index.html',
         inject: true
       }),
   

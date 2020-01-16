@@ -1,15 +1,18 @@
 
 
-.wrap_main {
-  padding: 0 calc(50% - 320px);
-  // background-color: #b5e7e5;
-  // @media screen and (min-width: 768.02px){
-  //   padding: 0;
+.container {
+  min-width: #{$phoneWidth};
+  padding: 0 calc(50% - #{$phoneWidth} / 2);
+  background-color: #b5e7e5;
+  outline: 2px solid #000000;
+
+    // @media #{$media_tablet_min} {
+
+    // }
+    
+    // @media #{$media_desktop} {
+    // padding: 0 calc(50% - 650px);
   // }
-  // @media screen and (min-width: 1300.02px){
-    @media #{$media_desktop} {
-    padding: 0 calc(50% - 650px);
-  }
 }
 
 .wrap_content {

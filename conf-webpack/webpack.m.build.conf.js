@@ -3,7 +3,8 @@ const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.m.common.conf')
 
 // const PATHS = require('./modules/PATHS/myPATHS') 
-const scssModule = require('./modules/scss/scss-build') 
+const scssModule = require('./modules/scss/scss-dev') 
+// const scssModule = require('./modules/scss/scss-build') 
 const cssModule = require('./modules/css/css-build')
 
 // const NODE_ENV = process.env.NODE_ENV // || 'development' // 'production' 
@@ -28,17 +29,19 @@ const buildConfig = {
 
 const buildWebpackConfig = merge([
   baseWebpackConfig,
-  scssModule(),
+  // scssModule(),
   // cssModule(),
   buildConfig,
  
 ])
 
 
-module.exports = env => { // env ???????????
-  new Promise((resolve, reject) => {
-    const isDev = env.NODE_ENV
-    console.log('isDev', isDev)
-    resolve(buildWebpackConfig)
-  })
-} 
+module.exports = new Promise((resolve, reject) => {
+  resolve(buildWebpackConfig)
+})
+
+// module.exports = (env) => { 
+//   return new Promise((resolve, reject) => {
+//     resolve(buildWebpackConfig)
+//   })
+// } 
