@@ -5,7 +5,7 @@ import './js/app.js'
 // new App().run()
 
 // // SCSS
-import './assets/scss/main.scss'
+import './scss/main.scss'
 
 // CSS (example)
 // import './assets/css/main.css'

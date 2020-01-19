@@ -22,9 +22,6 @@ const PAGES = fs
   .readdirSync(PAGES_DIR)
   .filter(fileName => fileName.endsWith('.html'))
 
-// const ANY_PAGES_DIR = PATHS.anyPages
-// const anyPAGES = fs.readdirSync(ANY_PAGES_DIR).filter(fileName => fileName.endsWith('.html'))
-
 module.exports = merge([
   { // externals
     externals: {
@@ -33,8 +30,8 @@ module.exports = merge([
   },
   { // entry
     entry: {
-      // app: PATHS.src,
-      index: './src/index',
+      app: PATHS.src,
+      // index: './src/index',
       // about: './src/about',
       // module: `${PATHS.src}/third.js`,
     }
@@ -42,9 +39,9 @@ module.exports = merge([
   { // output
     output: {
       path: PATHS.dist,
-      // filename: `${PATHS.assets}js/[name].js`,
-      filename: `${PATHS.assets}js/[name].[hash].js`, // +hash к имени файла
-      library: `${PATHS.assets}js/[name]`,
+      filename: `${PATHS.assets}js/[name].js`,
+      // filename: `${PATHS.assets}js/[name].[hash].js`, // +hash к имени файла
+      // library: `${PATHS.assets}js/[name]`, // из-за этой ху-ни не перегружаются страницы в режиме дэв !!!
       publicPath: '/'
     }
   },
@@ -67,7 +64,7 @@ module.exports = merge([
   imagesMod(),
   scssMod(),
   cssMod(),
-  htmlMod(),
+  // htmlMod(),
   // {
   //   module: {
   //     rules: [{
@@ -99,6 +96,7 @@ module.exports = merge([
       ]),
 
       new HtmlWebpackPlugin({
+        // title: 'Тут можно задать тайтл для этой страницы', //он не работает если есть template: '...'
         // filename: `${PATHS.src}/index.html`, // этот путь меняет index.html в src
         // template: `${PATHS.src}/index.html`,
         template: './src/index.html',

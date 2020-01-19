@@ -1,0 +1,43 @@
+.link_item {
+  display: flex;
+  flex-wrap: wrap;
+  // background: yellow;
+  
+  //   @media #{$media_tablet_min} {
+  //   }
+    
+  //   @media #{$media_desktop} {
+  // }
+
+  &--link {
+    display: flex;
+    flex-wrap: wrap;
+    // align-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+  //   @media #{$media_tablet_min} {
+  //   }
+    
+  //   @media #{$media_desktop} {
+  // }
+  }
+  
+  &--icon {
+  
+  //   @media #{$media_tablet_min} {
+  //   }
+    
+  //   @media #{$media_desktop} {
+  // }
+  }
+  &--name {
+    font: inherit;
+      
+  //   @media #{$media_tablet_min} {
+  //   }
+    
+  //   @media #{$media_desktop} {
+  // }
+  }
+}
