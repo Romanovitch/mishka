@@ -1,4 +1,4 @@
-$font-paths: '../assets/fonts/';
+$font-paths: './assets/fonts/'; // путь относительно main.scss
 
 
 @mixin font-face($name, $weight: normal, $style: normal){

@@ -1,24 +1,24 @@
 // @import "utils/_libs";
-@import "utils/vars";
-@import "utils/mixins";
-@import "utils/fonts";
-@import "utils/normalize";
-@import "utils/base-settings";
+@import "scss/utils/vars";
+@import "scss/utils/mixins";
+@import "scss/utils/fonts";
+@import "scss/utils/normalize";
+@import "scss/utils/base-settings";
 
 // @import "utils/reset";
 
 // COMMON blocks
-@import "blocks/common/wrappers";  
-
-//
-@import "blocks/image/image";
+@import "scss/common/wrappers";  
 
 
-// PAGES
-// @import "./pages/index"
+// // // components
+// common 
+@import "./components/common/link_item/link_item";
 
-
-
+// // INDEX.html
+// header
+@import "./components/header/main_nav/main_nav";
+@import "./components/header/logo/logo";
 
 
 
