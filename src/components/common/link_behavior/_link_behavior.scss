@@ -1,0 +1,16 @@
+.link_behavior {
+
+  &:hover &--name {
+    opacity: 0.6;
+  }
+
+  &:active &--name {
+    opacity: 0.3;
+  }
+
+  &:active  {
+    &::before {
+      opacity: 0.3;
+    }
+  }
+}

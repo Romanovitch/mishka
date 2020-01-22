@@ -19,14 +19,109 @@
     
   //   @media #{$media_desktop} {
   // }
-  &--btn {
-    // position: absolute;
-    // right: 0;
 
-    background-color: rgb(158, 40, 40);
+  &--btn_checkbox {
+    display: none;
   }
 
+  &--btn_label {
+    position: absolute;
+    top: 24px;
+    right: 30px;
+    display: flex;
+    // justify-content: center;
+    justify-content: flex-end;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(166, 228, 154);
+    cursor: pointer;
+      z-index: 10;
+      
+    @media #{$media_tablet_min} {
+      // display: none;
+    }
+  }
+
+  // сам бургер
+  &--btn_icon,
+  &--btn_icon::before,
+  &--btn_icon::after {
+    position: relative;
+    // position: absolute;
+    display: block;
+    height: 2px;
+    width: 20px;
+    background-color: #000000; 
+    cursor: pointer;
+  }
+
+  &--btn_icon {
+    &::before {
+      position: absolute;
+      content: '';
+      top: -6px;    
+    }
+    &::after {
+      position: absolute;
+      content: '';
+      top: 6px;    
+    }
+  }
+
+  // трансформ на крестик
+  &--btn_checkbox:checked ~ &--btn_label > &--btn_icon {
+    transform: rotate(45deg);
+
+    &::before {
+      top: 0;
+      transform: rotate(0);
+    }
+
+    &::after {
+      top: 0;
+      transform: rotate(90deg); 
+    }
+  }
+
+  // меню открыть
+  &--btn_checkbox:checked ~ &--list > &--item {
+    &-catalog,
+    &-knitting,
+    &-search,
+    &-cart {
+      display: flex;
+    }
+  }
+
+
+
+  &--list {
+
+    &-logo {
+      position: relative;
+    }
+
+    &-main_links {
+
+    }
+
+    &-info {
+
+    }
+
+    &-secondary_links {
+      display: none;
+    }
+    &-add_info {
+      display: none;
+    }
+  }
+
+
   &--logo {
+    position: relative;
+    // min-height: 79px;
   }
 
   &--main_links {
@@ -43,6 +138,7 @@
     display: none;
   }
 
+
   &--item {
     display: flex;
     flex-wrap: wrap;
@@ -52,6 +148,14 @@
 
     &-logo {
 
+    }
+
+    // меню скрыто
+    &-catalog,
+    &-knitting,
+    &-search,
+    &-cart {
+      display: none;
     }
 
   }
@@ -66,7 +170,7 @@
 
     padding-left: 46px;
     font-family: Arial, Helvetica, sans-serif;
-    background: rgb(240, 219, 219);
+    // background: rgb(240, 219, 219);
 
   //   @media #{$media_tablet_min} {
   //   }
@@ -74,29 +178,55 @@
   //   @media #{$media_desktop} {
   // }
 
-    &::before {
+    &-logo {
+      justify-content: center;
+      padding-left: 0px;
+    }
+
+    &-search::before,
+    &-cart::before {
       content: "";
       position: absolute;
       left: 0px;
       width: 20px;
       height: 18px;
-      background-color: rgb(173, 178, 247);
+      // background-color: rgb(173, 178, 247);
+      background-size: contain;
+      background-repeat: no-repeat;
     }
 
-    &-logo {
-      justify-content: center;
-      padding-left: 0px;
+    &-search::before {
+      background-image: url(#{$path}/icon_search_1x.png);
+    }
 
+    &-search:hover {
       &::before {
-        display: none;
+        background-image: url(#{$path}/icon_search_hover_1x.png);
       }
     }
 
-  }
+    &-cart::before {
+      background-image: url(#{$path}/icon_cart_1x.png);
+    }
 
-  &--link_btn {
-    position: absolute;
-    right: 0;
-    background-color: rgb(155, 56, 130);
+    &-cart:hover {
+      &::before {
+        background-image: url(#{$path}/icon_catr_hover_1x.png);
+      }
+    }
   }
 }
+
+// &--btn_icon,
+// &--btn_icon::before,
+// &--btn_icon::after {
+//   position: absolute;
+//   display: block;
+//   height: 2px;
+//   width: 100%;
+// }
+
+// #hamburger:checked ~  {
+//     background-color: #ece911;
+//     transform: rotate(45deg);
+// }
