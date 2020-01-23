@@ -10,39 +10,44 @@
 
 .main_nav {
   position: relative;
-  padding-left: 30px;
-  padding-right: 30px;
-  background: #f1bcbc;
+  background: #ffffff;
       
   //   @media #{$media_tablet_min} {
   //   }
     
   //   @media #{$media_desktop} {
   // }
-
+  // локальный враппер
+  &--wrap {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  // скрыть чекбокс 
   &--btn_checkbox {
     display: none;
   }
-
+  // подготовим место для кнопки
   &--btn_label {
     position: absolute;
-    top: 24px;
-    right: 30px;
+    top: 9px;
+    right: 0px;
+    width: 60px;
+    height: 60px;
+    padding-left: 10px;
+
     display: flex;
-    // justify-content: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
-    width: 30px;
-    height: 30px;
+
     background-color: rgb(166, 228, 154);
     cursor: pointer;
-      z-index: 10;
+    z-index: 10;
       
     @media #{$media_tablet_min} {
       // display: none;
     }
   }
-
   // сам бургер
   &--btn_icon,
   &--btn_icon::before,
@@ -55,7 +60,7 @@
     background-color: #000000; 
     cursor: pointer;
   }
-
+  // две полоски бургера
   &--btn_icon {
     &::before {
       position: absolute;
@@ -68,7 +73,6 @@
       top: 6px;    
     }
   }
-
   // трансформ на крестик
   &--btn_checkbox:checked ~ &--btn_label > &--btn_icon {
     transform: rotate(45deg);
@@ -83,7 +87,6 @@
       transform: rotate(90deg); 
     }
   }
-
   // меню открыть
   &--btn_checkbox:checked ~ &--list > &--item {
     &-catalog,
@@ -93,9 +96,7 @@
       display: flex;
     }
   }
-
-
-
+  // общие врапперы ссылок меню. 
   &--list {
 
     &-logo {
@@ -117,34 +118,17 @@
       display: none;
     }
   }
-
-
-  &--logo {
-    position: relative;
-    // min-height: 79px;
-  }
-
-  &--main_links {
-  }
-
-  &--info {
-  }
-
-  &--secondary_links {
-    display: none;
-  }
-
+  // ??? Бесплатная доставка
   &--add_info {
     display: none;
   }
-
-
+  // враппер для ссылки
   &--item {
     display: flex;
     flex-wrap: wrap;
     min-height: 79px;
-    background-color: rgb(193, 241, 208);
-    border-bottom: 1px solid #000000;
+    // background-color: rgb(193, 241, 208);
+    border-bottom: 1px solid #ECECEC;
 
     &-logo {
 
@@ -159,7 +143,6 @@
     }
 
   }
-
   &--link {
     position: relative;
     display: flex;
@@ -169,7 +152,9 @@
     flex-basis: 100%;
 
     padding-left: 46px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "OpenSans_Bold", Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: #000000;
     // background: rgb(240, 219, 219);
 
   //   @media #{$media_tablet_min} {
@@ -215,18 +200,17 @@
       }
     }
   }
+  // текст ссылок и логитип 
+  &--link_name {
+    font: inherit;
+
+    &-logo {
+      width: 86px;
+      height: 35px;
+      background-image: url("#{$path}/1x_M_logo_top.png"); 
+      background-size: cover;
+      background-repeat: no-repeat;      
+    }
+
+  }
 }
-
-// &--btn_icon,
-// &--btn_icon::before,
-// &--btn_icon::after {
-//   position: absolute;
-//   display: block;
-//   height: 2px;
-//   width: 100%;
-// }
-
-// #hamburger:checked ~  {
-//     background-color: #ece911;
-//     transform: rotate(45deg);
-// }

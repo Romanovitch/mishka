@@ -1,0 +1,41 @@
+    
+  //   @media #{$media_tablet_min} {
+  //   }
+    
+  //   @media #{$media_desktop} {
+  // }
+
+  $path : "./components/header/header";
+  // #{$path}
+
+.header {
+  min-height: 490px;
+  // background-color: #F9F9F9; 
+  background-color: rgb(241, 205, 205); 
+  background-repeat: no-repeat;
+  background-position-x: center;
+
+  background-image: url(#{$path}/1x_M_header_bg.jpeg);
+  background-size: 575px 373px;
+  background-position-y: -17px;
+
+
+  border-top: 1px solid #F9F9F9;
+  
+  &--title {
+
+  }
+
+  &--item {
+
+  }
+
+  &--link {
+
+  }
+
+  &--link_name {
+
+  }
+
+}

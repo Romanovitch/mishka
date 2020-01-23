@@ -21,7 +21,14 @@
 }
 
 .wrap_content {
+  // position: relative;
   // width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  &-main_nav {
+    
+  }
 
   //   @media #{$media_tablet_min} {
   //     padding: 0 calc(50% - #{$tabletWidth} / 2);
@@ -31,8 +38,8 @@
   //     padding: 0 calc(50% - #{$desktopWidth} / 2);
   // }
   // temporary
-  min-height: 1000px;
-  background-color: #d5e99e;
+  // min-height: 1000px;
+  // background-color: #d5e99e;
 }
 
 

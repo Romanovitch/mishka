@@ -16,15 +16,16 @@ $font-paths: './assets/fonts/'; // путь относительно main.scss
   }
 }
 
-// @include font-face('LucidaSans-Italic', $style: normal, $weight: normal);
-// @include font-face('SegoeUI-Light', $style: normal, $weight: normal);
-// @include font-face('SegoeUI-Bold', $style: normal, $weight: bold);
+// @include font-face('LucidaSans_Italic', $style: normal, $weight: normal);
+// @include font-face('SegoeUI_Light', $style: normal, $weight: normal);
+// @include font-face('SegoeUI_Bold', $style: normal, $weight: bold);
 // @include font-face('SegoeUI', $style: normal, $weight: normal);
-@include font-face('SegoeWP', $style: normal, $weight: normal);
-@include font-face('SegoeWP-Light', $style: normal, $weight: normal);
-// @include font-face('Asap-Regular', $style: normal, $weight: normal);
-// @include font-face('PTSans-Regular', $style: normal, $weight: normal);
-// @include font-face('PTSans-Narrow', $style: normal, $weight: normal);
+// @include font-face('SegoeWP', $style: normal, $weight: normal);
+// @include font-face('SegoeWP_Light', $style: normal, $weight: normal);
+// @include font-face('Asap_Regular', $style: normal, $weight: normal);
+// @include font-face('PTSans_Regular', $style: normal, $weight: normal);
+// @include font-face('PTSans_Narrow', $style: normal, $weight: normal);
 // @include font-face('OpenSans', $style: normal, $weight: normal);
+@include font-face('OpenSans_Bold', $style: normal, $weight: bold);
 
 // SegoeUI-Bold

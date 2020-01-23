@@ -18,14 +18,29 @@
 // // INDEX.html
 // header
 @import "./components/header/main_nav/main_nav";
-@import "./components/header/logo/logo";
-
+// @import "./components/header/logo/logo";
+@import "./components/header/header/header";  
 
 
 
 
 // COMMON blocks "high priority"
 @import "./components/common/link_behavior/link_behavior";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // html {
