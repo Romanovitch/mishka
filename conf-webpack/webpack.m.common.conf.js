@@ -64,7 +64,7 @@ module.exports = merge([
   imagesMod(),
   scssMod(),
   cssMod(),
-  // htmlMod(),
+  htmlMod(),
   // {
   //   module: {
   //     rules: [{

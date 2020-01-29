@@ -127,6 +127,8 @@
     display: flex;
     flex-wrap: wrap;
     min-height: 79px;
+    padding-left: #{$padding_content_mobile};
+    padding-right: #{$padding_content_mobile};
     // background-color: rgb(193, 241, 208);
     border-bottom: 1px solid #ECECEC;
 
@@ -143,7 +145,7 @@
     }
 
   }
-  &--link {
+  &--link { //
     position: relative;
     display: flex;
     flex-wrap: wrap;
