@@ -25,7 +25,7 @@ $font-paths: './assets/fonts/'; // путь относительно main.scss
 // @include font-face('Asap_Regular', $style: normal, $weight: normal);
 // @include font-face('PTSans_Regular', $style: normal, $weight: normal);
 // @include font-face('PTSans_Narrow', $style: normal, $weight: normal);
-// @include font-face('OpenSans', $style: normal, $weight: normal);
+@include font-face('OpenSans', $style: normal, $weight: normal);
 @include font-face('OpenSans_Bold', $style: normal, $weight: bold);
 
 // SegoeUI-Bold

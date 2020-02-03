@@ -1,0 +1,94 @@
+
+  //   @media #{$media_tablet_min} {
+  //   }
+    
+  //   @media #{$media_desktop} {
+  // }
+
+  // local vars
+  $color_bg_interior: #63D1BB;
+  $color_bg_toys: #56C3B2;
+
+  $path : "./components/featured/featured";
+  // #{$path}
+
+  .featured {
+  padding-top: 10px;
+  padding-bottom: 50px;
+  background-color: #ffffff;
+  background-image: url(#{$path}/zigzag-line-M@1X.png);  
+  background-repeat: repeat-x;
+  background-position-y: bottom;
+
+  &--wrap_title {
+
+  }
+  &--main_title {
+    margin: 0px;
+    font-family: "OpenSans_Bold", Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    line-height: 30px;
+    color: #010000;
+    text-align: left;
+
+  }
+  &--promo_title {
+    margin: 0px;
+    font-family: "OpenSans_Bold", Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 20px;
+    color: #63d1bb;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  &--description p {
+    margin: 0px;
+    font-family: "OpenSans", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    color: #444444;
+    text-align: left;
+  }
+  &--spec {
+
+    &_row {
+      display: flex;  
+      flex-wrap: wrap;
+      margin: 0px;
+
+      font-family: "OpenSans", Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 20px;
+      color: #444444;
+      text-align: left;
+
+      border-bottom: 1px solid #ECECEC;
+
+      &_name {
+        // display: inline-block;
+        width: 38%;
+        // min-width: 100px;
+      }
+      &_data {
+        // display: inline-block;
+        width: 61%; 
+      }
+    }
+  }
+  &--picture {
+
+  }
+  &--price {
+    margin: 0px;
+    font-family: "OpenSans_Bold", Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 24px;
+    color: #444444;
+    text-align: center;
+  }
+  &--wrap_submit {
+  }
+  &--submit {
+  }
+}
+
