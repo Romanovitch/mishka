@@ -1,0 +1,51 @@
+
+  //   @media #{$media_tablet_min} {
+  //   }
+    
+  //   @media #{$media_desktop} {
+  // }
+
+  // local vars
+  // $color_bg_interior: #63D1BB;
+  // $color_bg_toys: #56C3B2;
+
+  $path : "./components/about/advantage";
+  // #{$path}
+
+  .advantage {
+    
+    font-family: "OpenSans_Bold", Arial, Helvetica, sans-serif;
+    color: #000000;
+    text-align: left;
+
+    &--title {
+      margin-bottom: 30px;
+
+      font-size: 25px;
+      line-height: 30px;
+    }
+
+    &--list {
+      font-size: 17px;
+      line-height: 20px;
+    }
+
+    &--item {
+      margin-bottom: 26px;
+
+      
+
+      &-materials {
+      }
+      &-price {
+      }
+      &-multiplication {
+      }
+      &-handmade {
+      }
+      &-native {
+      }
+      &-gift_box {
+      }
+    }
+  }

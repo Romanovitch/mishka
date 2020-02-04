@@ -1,0 +1,29 @@
+
+  //   @media #{$media_tablet_min} {
+  //   }
+    
+  //   @media #{$media_desktop} {
+  // }
+
+  // local vars
+  // $color_bg_interior: #63D1BB;
+  // $color_bg_toys: #56C3B2;
+
+  $path : "./components/about/about";
+  // #{$path}
+
+.about {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  background-color: #ffffff;
+  background-image: url(#{$path}/zigzag-line-M@1X.png);  
+  background-repeat: repeat-x;
+  background-position-y: bottom;
+
+  &--advantage {
+
+  }
+  &--review {
+
+  }
+}
